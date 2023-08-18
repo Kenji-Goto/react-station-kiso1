@@ -11,6 +11,12 @@
 
 .make{
   color: white;
+  font-size: 20px;
+  font-weight: bold;
   margin: 30px;
   flex-grow: 0.1;
+}
+
+a:hover{
+  color: aqua;
 }

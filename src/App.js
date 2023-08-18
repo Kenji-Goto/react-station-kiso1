@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Threads } from './Threads';
+
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
         <h2 className='sign'>掲示板</h2>
-        <h2 className='make'>スレッドを作成</h2>
+        <a className='make' href='th'>スレッドを作成</a>
       </header>
-      <body>
-        予定を表示
-      </body>
+      <Threads />
     </div>
   );
 }
