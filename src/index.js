@@ -9,14 +9,16 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import  Threads  from './Threads/Threads';
+import  ThreadCreate  from './Threads/ThreadCreate';
+import {ThreadsList} from './Threads/ThreadsList';
 
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="threads" element={<Threads />} />
+      <Route path="/" element={<ThreadsList />} />
+      <Route path="threads/new" element={<ThreadCreate />} />
     </Route>
   )
 );

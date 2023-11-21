@@ -9,7 +9,7 @@ function App() {
     <div>
       <header className="App-header">
         <Link to="/" className='sign'>掲示板</Link>
-        <Link to="/threads" className='make'>スレッドを作成</Link>
+        <Link to="/threads/new" className='make'>スレッドを作成</Link>
       </header>
       <Outlet />
     </div>
