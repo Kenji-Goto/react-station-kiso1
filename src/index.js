@@ -10,7 +10,8 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import  ThreadCreate  from './Threads/ThreadCreate';
-import {ThreadsList} from './Threads/ThreadsList';
+import ThreadsList from './Threads/ThreadsList';
+import ThreadContent from './Threads/ThreadContent';
 
 
 
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="/" element={<ThreadsList />} />
       <Route path="threads/new" element={<ThreadCreate />} />
+      <Route path="thread/:id" element={<ThreadContent />} />
     </Route>
   )
 );

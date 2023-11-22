@@ -19,7 +19,7 @@ export function Threads() {
         <div className='content'>
             <h2 className='title'>スレッド新規作成</h2>
             <form>
-                <input type='text' placeholder='スレッドタイトル' id="threadName" />
+                <input type='text' placeholder='スレッドタイトル' id="threadName" name="message" required/>
             </form>
             <div className='Flex'>
                 <Link to="/">Topに戻る</Link>

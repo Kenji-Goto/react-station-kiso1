@@ -1,6 +1,7 @@
 
 import axios from "axios";
 import "./Threads.css";
+import { Link, Outlet } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
 export function ThreadsList() {
@@ -9,19 +10,21 @@ export function ThreadsList() {
 
 
     useEffect(() => {
-        axios.get("https://railway.bulletinboard.techtrain.dev/threads?offset=0")
+        try{axios.get("https://railway.bulletinboard.techtrain.dev/threads?offset=0")
             .then((response) => {
                 console.log(response)
                 setThreadsList(response.data)
-
             })
-    }, [])
+            }catch(error){
+                console.log("エラーが発生しました")
+            }
+        }, [])
 
 
 
     function showList() {
         return (
-            threadsList.map(data => <tr><td className="threadNames">{data.title}</td></tr>)
+            threadsList.map(data => <tr><td className="threadNames"><Link to={"thread/"+data.id}>{data.title}</Link></td></tr>)
         )
     }
 
