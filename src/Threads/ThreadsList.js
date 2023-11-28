@@ -21,10 +21,10 @@ export function ThreadsList() {
         }, [])
 
 
-
+    //無記名関数がお作法
     function showList() {
         return (
-            threadsList.map(data => <tr><td className="threadNames"><Link to={"thread/"+data.id}>{data.title}</Link></td></tr>)
+            threadsList.map(data => <tr><td className="threadNames"><Link to={"thread/"+data.id} state={{title:data.title}} >{data.title}</Link></td></tr>)
         )
     }
 

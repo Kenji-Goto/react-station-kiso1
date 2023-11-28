@@ -15,6 +15,10 @@
     justify-content: center;
 }
 
+.Flex :first-child{
+    text-align: right;
+}
+
 button{
     margin-left: 40px;
     background-color: rgb(136, 237, 122);
