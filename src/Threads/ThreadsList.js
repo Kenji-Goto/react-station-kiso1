@@ -12,7 +12,7 @@ export function ThreadsList() {
     useEffect(() => {
         try{axios.get("https://railway.bulletinboard.techtrain.dev/threads?offset=0")
             .then((response) => {
-                console.log(response)
+                console.log(response.data)
                 setThreadsList(response.data)
             })
             }catch(error){
